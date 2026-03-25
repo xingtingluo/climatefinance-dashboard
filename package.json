@@ -10,6 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.39.1",
+    "@clerk/themes": "^2.4.57",
     "@emotion/is-prop-valid": "^1.2.2",
     "@hookform/resolvers": "^3.3.4",
     "@nivo/bar": "^0.88.0",

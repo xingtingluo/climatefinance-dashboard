@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server"
 import { convertToIso3 } from "@/lib/utils"
 
+export const dynamic = "force-dynamic"
+
 export async function GET(request: Request) {
   try {
     // Get country code from URL

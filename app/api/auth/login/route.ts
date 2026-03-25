@@ -2,6 +2,8 @@ import { NextResponse } from "next/server"
 import { v4 as uuidv4 } from "uuid"
 import { generateTokens, setTokenCookies } from "@/lib/jwt"
 
+export const dynamic = "force-dynamic"
+
 // In a real app, you would use a database
 // For demo purposes, we're using the same in-memory store
 // This would be imported from a shared module in a real app
@@ -62,4 +64,3 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: "Internal server error" }, { status: 500 })
   }
 }
-

@@ -24,6 +24,12 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
+    --clerk-panel: 0 0% 100%;
+    --clerk-panel-muted: 210 40% 98%;
+    --clerk-input-surface: 140 25% 94%;
+    --clerk-text: 222.2 84% 4.9%;
+    --clerk-text-secondary: 215.4 16.3% 46.9%;
+    --clerk-border: 214.3 31.8% 86%;
   }
 
   .dark {
@@ -46,6 +52,12 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
+    --clerk-panel: 0 0% 3%;
+    --clerk-panel-muted: 0 0% 5%;
+    --clerk-input-surface: 145 25% 12%;
+    --clerk-text: 210 40% 98%;
+    --clerk-text-secondary: 215 20.2% 65.1%;
+    --clerk-border: 145 15% 14%;
   }
 }
 
@@ -58,3 +70,60 @@
   }
 }
 
+@layer components {
+  .login-clerk-shell .cl-rootBox,
+  .login-clerk-shell .cl-cardBox,
+  .login-clerk-shell .cl-card,
+  .login-clerk-shell .cl-main,
+  .login-clerk-shell .cl-form,
+  .login-clerk-shell .cl-formFieldRow,
+  .login-clerk-shell .cl-formButtonRow {
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  .login-clerk-shell .cl-formFieldInput {
+    border: 1px solid rgba(20, 83, 45, 0.45) !important;
+    background: rgb(20, 33, 27) !important;
+    border-radius: 0.5rem !important;
+    box-shadow: none !important;
+  }
+
+  .login-clerk-shell .cl-formButtonPrimary {
+    border-radius: 0.5rem !important;
+  }
+
+  html:not(.dark) .cl-userProfile-root .cl-card,
+  html:not(.dark) .cl-profileSectionPrimaryButton__profile,
+  html:not(.dark) .cl-rootBox .cl-card {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border-color: #e2e8f0 !important;
+  }
+
+  html:not(.dark) .cl-userProfile-root .cl-navbar,
+  html:not(.dark) .cl-userProfile-root .cl-footer,
+  html:not(.dark) .cl-userProfile-root .cl-scrollBox,
+  html:not(.dark) .cl-userProfile-root .cl-pageScrollBox {
+    background-color: #f8fafc !important;
+    color: #0f172a !important;
+    border-color: #e2e8f0 !important;
+  }
+
+  html:not(.dark) .cl-userProfile-root .cl-navbarButton,
+  html:not(.dark) .cl-userProfile-root .cl-navbarMobileMenuButton {
+    color: #475569 !important;
+  }
+
+  html:not(.dark) .cl-userProfile-root .cl-navbarButton:hover,
+  html:not(.dark) .cl-userProfile-root .cl-navbarMobileMenuButton:hover {
+    background-color: #e2e8f0 !important;
+    color: #0f172a !important;
+  }
+
+  html:not(.dark) .cl-userProfile-root .cl-navbarButtonActive {
+    background-color: #e2e8f0 !important;
+    color: #0f172a !important;
+  }
+}

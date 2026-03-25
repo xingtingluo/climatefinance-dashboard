@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server"
+import { auth } from "@clerk/nextjs/server"
 import { convertToIso3 } from "@/lib/utils"
+
+export const dynamic = "force-dynamic"
 
 // Mapping for scenario names to file name parts
 const scenarioToFileNameMap: { [key: string]: string } = {
@@ -9,6 +12,8 @@ const scenarioToFileNameMap: { [key: string]: string } = {
 }
 
 export async function GET(request: Request) {
+  await auth.protect()
+
   const { searchParams } = new URL(request.url)
   let country = searchParams.get("country")
   const order = searchParams.get("order") || "maturity"
@@ -68,4 +73,3 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Failed to fetch map data" }, { status: 500 })
   }
 }
-

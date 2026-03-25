@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server"
+import { auth } from "@clerk/nextjs/server"
 import { convertToIso3 } from "@/lib/utils"
+
+export const dynamic = "force-dynamic"
 
 // ISO3 to ISO2 mapping
 const iso3ToIso2Map: { [key: string]: string } = {
@@ -18,6 +21,8 @@ const iso3ToIso2Map: { [key: string]: string } = {
 }
 
 export async function GET(request: Request) {
+  await auth.protect()
+
   const { searchParams } = new URL(request.url)
   let country = searchParams.get("country")
 
@@ -82,4 +87,3 @@ export async function GET(request: Request) {
     })
   }
 }
-

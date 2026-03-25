@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { Suspense, useState, useEffect } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -51,7 +51,7 @@ interface AssetData {
   allocated_emissions?: number; // Emissions allocated by owner share
 }
 
-export default function AssetsDetailsPage() {
+function AssetsDetailsPageContent() {
   const searchParams = useSearchParams()
   const country = searchParams?.get("country")
   const useFallback = searchParams?.get("fallback") === "true"
@@ -720,4 +720,12 @@ export default function AssetsDetailsPage() {
       </div>
     </div>
   )
-} 
+}
+
+export default function AssetsDetailsPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-background" />}>
+      <AssetsDetailsPageContent />
+    </Suspense>
+  )
+}

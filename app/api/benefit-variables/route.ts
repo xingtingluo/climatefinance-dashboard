@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server'
 
+export const dynamic = "force-dynamic"
+
 // Define types for the data structure
 interface BenefitVariable {
   id: string

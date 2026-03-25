@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server"
 
+export const dynamic = "force-dynamic"
+
 // Define the cost variables with their mapping to the external data source
 const COST_VARIABLES = [
   // Warm tones from the "costs" palette (oranges/reds)
@@ -95,4 +97,3 @@ export async function GET(request: Request) {
     )
   }
 }
-

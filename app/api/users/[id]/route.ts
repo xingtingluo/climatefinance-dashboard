@@ -2,6 +2,8 @@ import { NextResponse } from "next/server"
 import { cookies } from "next/headers"
 import { createClient } from "@supabase/supabase-js"
 
+export const dynamic = "force-dynamic"
+
 // In a real app, you would use a database
 // For demo purposes, we're using the same in-memory store
 // This would be imported from a shared module in a real app
@@ -213,4 +215,3 @@ export async function DELETE(request: Request, { params }: { params: { id: strin
     )
   }
 }
-

@@ -1,16 +1,16 @@
 "use client"
 
+import { Suspense } from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { DownloadStackedCost } from "@/components/download-stacked-cost"
 import { DownloadStackedBenefit } from "@/components/download-stacked-benefit"
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from "next/navigation"
-import { COUNTRY_NAMES } from "@/lib/constants"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
-export default function StackedDataDownloadPage() {
+function StackedDataDownloadPageContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const currentTab = searchParams?.get('type') || 'cost'
@@ -69,4 +69,12 @@ export default function StackedDataDownloadPage() {
       </div>
     </div>
   )
-} 
+}
+
+export default function StackedDataDownloadPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#1A2A1A]" />}>
+      <StackedDataDownloadPageContent />
+    </Suspense>
+  )
+}

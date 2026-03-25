@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server"
 
+export const dynamic = "force-dynamic"
+
 // Define type for country codes
 type CountryCode = 'IND' | 'IDN' | 'ZAF' | 'VNM' | 'IRN' | 'MEX' | 'NGA' | 'EGY' | 'KEN' | 'TZA' | 'THA' | 'UGA';
 
@@ -243,4 +245,3 @@ export async function GET(request: Request) {
     }, { status: 500 });
   }
 }
-

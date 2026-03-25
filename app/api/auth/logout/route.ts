@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server"
 import { invalidateRefreshToken } from "@/lib/jwt"
 
+export const dynamic = "force-dynamic"
+
 /**
  * Endpoint to log out a user by invalidating their refresh token and clearing cookies
  */
@@ -45,4 +47,3 @@ export async function POST(request: NextRequest) {
     )
   }
 }
-

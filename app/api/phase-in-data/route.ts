@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server"
 
+export const dynamic = "force-dynamic"
+
 // Define the phase-in variables with their mapping to the external data source
 const PHASE_IN_VARIABLES = [
   // Renewable technologies - blues to greens

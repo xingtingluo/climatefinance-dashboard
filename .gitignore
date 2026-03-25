@@ -21,6 +21,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+.local-backups/
 
 # typescript
 *.tsbuildinfo
@@ -34,3 +35,9 @@ next-env.d.ts
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# local scratch images at repo root
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp

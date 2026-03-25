@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server"
 import { refreshAccessToken, setTokenCookie } from "@/lib/jwt"
 
+export const dynamic = "force-dynamic"
+
 /**
  * Endpoint to refresh an access token using a refresh token
  */

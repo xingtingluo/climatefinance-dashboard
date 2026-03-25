@@ -61,7 +61,7 @@ export default function DownloadsPage() {
               </CardContent>
               <CardFooter>
                 <Link href="/downloads/system-cost-benefits" className="w-full">
-                  <Button className="w-full">
+                  <Button className="w-full border-0 bg-gradient-to-r from-zinc-900 to-[#2F3A2F] text-white shadow-lg transition-all duration-300 hover:from-zinc-900 hover:to-[#243024]">
                     <Download className="mr-2 h-4 w-4" />
                     Access Data
                   </Button>
@@ -87,7 +87,7 @@ export default function DownloadsPage() {
               </CardContent>
               <CardFooter>
                 <Link href="/downloads/stacked-data?type=cost" className="w-full">
-                  <Button className="w-full">
+                  <Button className="w-full border-0 bg-gradient-to-r from-zinc-900 to-[#2F3A2F] text-white shadow-lg transition-all duration-300 hover:from-zinc-900 hover:to-[#243024]">
                     <Download className="mr-2 h-4 w-4" />
                     Access Data
                   </Button>
@@ -114,7 +114,7 @@ export default function DownloadsPage() {
               </CardContent>
               <CardFooter>
                 <Link href="/downloads/phase-in-data" className="w-full">
-                  <Button className="w-full">
+                  <Button className="w-full border-0 bg-gradient-to-r from-zinc-900 to-[#2F3A2F] text-white shadow-lg transition-all duration-300 hover:from-zinc-900 hover:to-[#243024]">
                     <Download className="mr-2 h-4 w-4" />
                     Access Data
                   </Button>

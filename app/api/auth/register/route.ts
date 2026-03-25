@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server"
 import { v4 as uuidv4 } from "uuid"
 
+export const dynamic = "force-dynamic"
+
 // In a real app, you would use a database
 // This is a simple in-memory store for demonstration
 const users: any[] = []
@@ -39,4 +41,3 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: "Internal server error" }, { status: 500 })
   }
 }
-

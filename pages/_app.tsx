@@ -1,6 +1,8 @@
 import type { AppProps } from 'next/app'
+import { ClerkProvider } from "@clerk/nextjs"
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { clerkAppearance } from '@/lib/clerk-appearance'
 
 // Import global styles
 import '@/app/globals.css'
@@ -16,5 +18,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     }
   }, [router])
 
-  return <Component {...pageProps} />
-} 
+  return (
+    <ClerkProvider appearance={clerkAppearance}>
+      <Component {...pageProps} />
+    </ClerkProvider>
+  )
+}

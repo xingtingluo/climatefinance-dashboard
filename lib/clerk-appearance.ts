@@ -1,0 +1,50 @@
+import { shadcn } from "@clerk/themes"
+
+export const clerkAppearance = {
+  baseTheme: shadcn,
+  variables: {
+    colorPrimary: "#2f3a2f",
+    colorBackground: "transparent",
+    colorInputBackground: "hsl(var(--clerk-input-surface))",
+    colorInputText: "hsl(var(--clerk-text))",
+    colorText: "hsl(var(--clerk-text))",
+    colorTextSecondary: "hsl(var(--clerk-text-secondary))",
+    colorDanger: "#f97316",
+    borderRadius: "0.5rem",
+  },
+  elements: {
+    rootBox: "w-full",
+    cardBox: "shadow-none",
+    card: "border border-slate-200 bg-white text-slate-950 shadow-sm dark:border-white/10 dark:bg-[#050505] dark:text-white",
+    pageScrollBox: "bg-transparent",
+    navbar: "border-r border-slate-200 bg-slate-50 dark:border-white/10 dark:bg-[#0a0a0a]",
+    navbarMobileMenuButton: "text-slate-700 hover:bg-slate-100 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white",
+    navbarButton: "text-slate-500 hover:bg-slate-100 hover:text-slate-950 dark:text-slate-400 dark:hover:bg-white/5 dark:hover:text-white",
+    navbarButtonActive: "bg-slate-200 text-slate-950 shadow-none dark:bg-white/10 dark:text-white",
+    page: "bg-white dark:bg-[#050505]",
+    headerTitle: "text-foreground",
+    headerSubtitle: "text-muted-foreground",
+    profileSectionTitleText: "text-foreground",
+    profileSectionSubtitleText: "text-muted-foreground",
+    formFieldLabel: "block pl-1 text-foreground",
+    formFieldInput:
+      "border border-[hsl(var(--clerk-border))] bg-[hsl(var(--clerk-input-surface))] text-foreground placeholder:text-muted-foreground shadow-none focus-visible:ring-1 focus-visible:ring-ring",
+    formButtonPrimary:
+      "border-0 bg-gradient-to-r from-zinc-900 to-[#2F3A2F] text-white shadow-lg transition-all duration-300 hover:from-zinc-900 hover:to-[#243024]",
+    formFieldAction: "text-muted-foreground hover:text-primary",
+    footerPageLink: "text-muted-foreground hover:text-primary",
+    accordionTriggerButton: "text-foreground hover:bg-accent hover:text-accent-foreground",
+    accordionContent: "bg-[hsl(var(--clerk-panel))]",
+    badge: "bg-secondary text-secondary-foreground",
+    dangerSection: "border-orange-500/20 bg-orange-500/5",
+    formFieldErrorText: "text-orange-400",
+    formFieldSuccessText: "text-emerald-400",
+    formResendCodeLink: "text-foreground hover:text-primary",
+    otpCodeFieldInput:
+      "border border-[hsl(var(--clerk-border))] bg-[hsl(var(--clerk-input-surface))] text-foreground shadow-none",
+    identityPreviewText: "text-muted-foreground",
+    alertText: "text-foreground",
+    footer: "hidden",
+    footerAction: "hidden",
+  },
+} as const

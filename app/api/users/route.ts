@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server"
 import { getCurrentUser } from "@/lib/jwt"
 
+export const dynamic = "force-dynamic"
+
 // In a real app, you would use a database
 // For demo purposes, we're using the same in-memory store
 // This would be imported from a shared module in a real app
@@ -42,4 +44,3 @@ export async function GET(request: Request) {
     return NextResponse.json({ message: "Internal server error" }, { status: 500 })
   }
 }
-

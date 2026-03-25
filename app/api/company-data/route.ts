@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server"
+import { auth } from "@clerk/nextjs/server"
+
+export const dynamic = "force-dynamic"
 
 export async function GET(request: Request) {
+  await auth.protect()
+
   const { searchParams } = new URL(request.url)
   const country = searchParams.get("country")
   

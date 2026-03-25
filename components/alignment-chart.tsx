@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 import { COUNTRY_NAMES } from "@/lib/constants"
 import { useTheme } from "next-themes"
 import { InfoDialog } from "@/components/ui/info-dialog"
-import { scenarioDataMap } from "@/app/api/alignment-data/route"
+import { scenarioDataMap } from "@/lib/alignment-scenarios"
 
 const FIGURE_NOTES = "This visualization shows emission intensity pathways (in metric tonnes of CO₂ per MWh electricity generation) comparing the actual emissions pathway with targets for 1.5°C and 2°C warming scenarios."
 
