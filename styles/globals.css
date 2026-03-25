@@ -88,10 +88,15 @@
     background: rgb(20, 33, 27) !important;
     border-radius: 0.5rem !important;
     box-shadow: none !important;
+    padding-left: 1rem !important;
   }
 
   .login-clerk-shell .cl-formButtonPrimary {
     border-radius: 0.5rem !important;
+  }
+
+  .login-clerk-shell .cl-formFieldInput::placeholder {
+    color: rgba(148, 163, 184, 0.82) !important;
   }
 
   html:not(.dark) .cl-userProfile-root .cl-card,
