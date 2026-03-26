@@ -99,6 +99,7 @@
     color: rgba(148, 163, 184, 0.82) !important;
   }
 
+  /* Light mode overrides */
   html:not(.dark) .cl-userProfile-root .cl-card,
   html:not(.dark) .cl-profileSectionPrimaryButton__profile,
   html:not(.dark) .cl-rootBox .cl-card {
@@ -116,6 +117,21 @@
     border-color: #e2e8f0 !important;
   }
 
+  html:not(.dark) .cl-userProfile-root .cl-page,
+  html:not(.dark) .cl-userProfile-root .cl-profileSection,
+  html:not(.dark) .cl-userProfile-root .cl-profileSectionContent,
+  html:not(.dark) .cl-userProfile-root .cl-accordionContent {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  html:not(.dark) .cl-userProfile-root .cl-profileSectionItem,
+  html:not(.dark) .cl-userProfile-root .cl-profileSectionItemContent {
+    background-color: #f8fafc !important;
+    border-color: #e2e8f0 !important;
+    color: #0f172a !important;
+  }
+
   html:not(.dark) .cl-userProfile-root .cl-navbarButton,
   html:not(.dark) .cl-userProfile-root .cl-navbarMobileMenuButton {
     color: #475569 !important;
@@ -130,5 +146,95 @@
   html:not(.dark) .cl-userProfile-root .cl-navbarButtonActive {
     background-color: #e2e8f0 !important;
     color: #0f172a !important;
+  }
+
+  /* Dark mode overrides */
+  html.dark .cl-userProfile-root .cl-card,
+  html.dark .cl-rootBox .cl-card {
+    background-color: #050505 !important;
+    color: #f1f5f9 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  html.dark .cl-userProfile-root .cl-navbar {
+    background-color: #0a0a0a !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  html.dark .cl-userProfile-root .cl-scrollBox,
+  html.dark .cl-userProfile-root .cl-pageScrollBox {
+    background-color: #050505 !important;
+  }
+
+  html.dark .cl-userProfile-root .cl-page,
+  html.dark .cl-userProfile-root .cl-profileSection,
+  html.dark .cl-userProfile-root .cl-profileSectionContent,
+  html.dark .cl-userProfile-root .cl-accordionContent {
+    background-color: #050505 !important;
+    color: #f1f5f9 !important;
+  }
+
+  html.dark .cl-userProfile-root .cl-profileSectionItem,
+  html.dark .cl-userProfile-root .cl-profileSectionItemContent {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    color: #f1f5f9 !important;
+  }
+
+  html.dark .cl-userProfile-root .cl-profileSectionTitle,
+  html.dark .cl-userProfile-root .cl-profileSectionTitleText,
+  html.dark .cl-userProfile-root .cl-headerTitle,
+  html.dark .cl-userProfile-root .cl-headerSubtitle,
+  html.dark .cl-userProfile-root .cl-profileSectionSubtitleText {
+    color: #f1f5f9 !important;
+  }
+
+  html.dark .cl-userProfile-root .cl-profileSectionSubtitleText,
+  html.dark .cl-userProfile-root .cl-identityPreviewText {
+    color: #94a3b8 !important;
+  }
+
+  html.dark .cl-userProfile-root .cl-navbarButton {
+    color: #94a3b8 !important;
+  }
+
+  html.dark .cl-userProfile-root .cl-navbarButton:hover,
+  html.dark .cl-userProfile-root .cl-navbarMobileMenuButton:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: #f1f5f9 !important;
+  }
+
+  html.dark .cl-userProfile-root .cl-navbarButtonActive {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f1f5f9 !important;
+  }
+
+  html.dark .cl-userProfile-root .cl-formFieldInput {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f1f5f9 !important;
+  }
+
+  html.dark .cl-userProfile-root .cl-formFieldLabel {
+    color: #f1f5f9 !important;
+  }
+
+  html.dark .cl-userProfile-root .cl-badge {
+    background-color: rgba(47, 58, 47, 0.6) !important;
+    color: #86efac !important;
+    border-color: rgba(47, 58, 47, 0.8) !important;
+  }
+
+  html.dark .cl-userProfile-root .cl-accordionTriggerButton {
+    color: #f1f5f9 !important;
+    background-color: transparent !important;
+  }
+
+  html.dark .cl-userProfile-root .cl-accordionTriggerButton:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  html.dark .cl-userProfile-root .cl-dividerLine {
+    border-color: rgba(255, 255, 255, 0.08) !important;
   }
 }
